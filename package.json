@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "commit": "git-cz",
+    "prepare": "yarn build",
     "build": "scripts/build declaration && scripts/build rollup",
     "build:declaration": "scripts/build declaration",
     "build:rollup": "scripts/build rollup",
