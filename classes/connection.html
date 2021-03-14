@@ -2382,6 +2382,9 @@ img {
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a href="connection.html#onmatch" class="tsd-kind-icon">on<wbr>Match</a>
 				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a href="connection.html#call" class="tsd-kind-icon">call</a>
+				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="connection.html#close" class="tsd-kind-icon">close</a>
 				</li>
@@ -2570,6 +2573,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="connection.html#call" class="tsd-kind-icon">call</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="connection.html#close" class="tsd-kind-icon">close</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="connection.html#create" class="tsd-kind-icon">create</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="connection.html#createnode" class="tsd-kind-icon">create<wbr>Node</a></li>
@@ -2622,7 +2626,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Overrides <a href="setblock.html">SetBlock</a>.<a href="setblock.html#constructor">constructor</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/connection.ts#L100">connection.ts:100</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/connection.ts#L100">connection.ts:100</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2677,7 +2681,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#oncreate">onCreate</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L202">builder.ts:202</a></li>
+						<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L203">builder.ts:203</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2701,7 +2705,7 @@ query.onCreate.setVariables({ <span class="hljs-string">'node.createdAt'</span>:
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#onmatch">onMatch</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L219">builder.ts:219</a></li>
+						<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L220">builder.ts:220</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2721,6 +2725,47 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+				<a name="call" class="tsd-anchor"></a>
+				<h3>call</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<li class="tsd-signature tsd-kind-icon">call&lt;SubQueryResult&gt;<span class="tsd-signature-symbol">(</span>subQuery<span class="tsd-signature-symbol">: </span><a href="query.html" class="tsd-signature-type">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SubQueryResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="query.html" class="tsd-signature-type">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SubQueryResult</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">G</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#call">call</a></p>
+							<ul>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L239">builder.ts:239</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Executes <a href="https://neo4j.com/docs/cypher-manual/current/clauses/call-subquery/" class="external">call</a>
+									on every row.
+									The returned result can be used in the parent query. Make sure that the sub queries
+									graph model only uses existing data since there is no type check between parent
+								and sub query</p>
+							</div>
+						</div>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>SubQueryResult</h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>subQuery: <a href="query.html" class="tsd-signature-type">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SubQueryResult</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="query.html" class="tsd-signature-type">Query</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SubQueryResult</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">G</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 				<a name="close" class="tsd-anchor"></a>
 				<h3>close</h3>
@@ -2731,7 +2776,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/connection.ts#L146">connection.ts:146</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/connection.ts#L146">connection.ts:146</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2755,7 +2800,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#create">create</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L265">builder.ts:265</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L279">builder.ts:279</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2820,7 +2865,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#createnode">createNode</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L296">builder.ts:296</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L310">builder.ts:310</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2881,7 +2926,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#createunique">createUnique</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L279">builder.ts:279</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L293">builder.ts:293</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2923,7 +2968,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#createuniquenode">createUniqueNode</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L317">builder.ts:317</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L331">builder.ts:331</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2976,7 +3021,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#delete">delete</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L342">builder.ts:342</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L356">builder.ts:356</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3028,7 +3073,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#detachdelete">detachDelete</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L355">builder.ts:355</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L369">builder.ts:369</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3072,7 +3117,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#limit">limit</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L369">builder.ts:369</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L383">builder.ts:383</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3102,7 +3147,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#match">match</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L414">builder.ts:414</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L428">builder.ts:428</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3176,7 +3221,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#matchnode">matchNode</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L433">builder.ts:433</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L447">builder.ts:447</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3227,7 +3272,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#merge">merge</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L478">builder.ts:478</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L492">builder.ts:492</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3283,7 +3328,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#optionalmatch">optionalMatch</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L451">builder.ts:451</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L465">builder.ts:465</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3332,7 +3377,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#orderby">orderBy</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L538">builder.ts:538</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L552">builder.ts:552</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3397,7 +3442,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/connection.ts#L170">connection.ts:170</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/connection.ts#L170">connection.ts:170</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3428,7 +3473,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#raw">raw</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L572">builder.ts:572</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L586">builder.ts:586</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3470,7 +3515,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#remove">remove</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L612">builder.ts:612</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L626">builder.ts:626</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3533,7 +3578,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#removelabels">removeLabels</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L658">builder.ts:658</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L672">builder.ts:672</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3571,7 +3616,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#removeproperties">removeProperties</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L637">builder.ts:637</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L651">builder.ts:651</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3622,7 +3667,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#return">return</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L724">builder.ts:724</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L738">builder.ts:738</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3692,7 +3737,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#returndistinct">returnDistinct</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L734">builder.ts:734</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L748">builder.ts:748</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3721,7 +3766,7 @@ query.onMatch.setVariables({ <span class="hljs-string">'node.updatedAt'</span>: 
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#returnobject">returnObject</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L769">builder.ts:769</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L783">builder.ts:783</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3779,7 +3824,7 @@ q.returnObject([
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/connection.ts#L228">connection.ts:228</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/connection.ts#L228">connection.ts:228</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3847,7 +3892,7 @@ q.returnObject([
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/connection.ts#L157">connection.ts:157</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/connection.ts#L157">connection.ts:157</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3874,7 +3919,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="setblock.html">SetBlock</a>.<a href="setblock.html#set">set</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L84">builder.ts:84</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L85">builder.ts:85</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3939,7 +3984,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="setblock.html">SetBlock</a>.<a href="setblock.html#setlabels">setLabels</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L106">builder.ts:106</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L107">builder.ts:107</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3974,7 +4019,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="setblock.html">SetBlock</a>.<a href="setblock.html#setvalues">setValues</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L135">builder.ts:135</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L136">builder.ts:136</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4019,7 +4064,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="setblock.html">SetBlock</a>.<a href="setblock.html#setvariables">setVariables</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L163">builder.ts:163</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L164">builder.ts:164</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4065,7 +4110,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#skip">skip</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L782">builder.ts:782</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L796">builder.ts:796</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4094,7 +4139,7 @@ q.returnObject([
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/connection.ts#L319">connection.ts:319</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/connection.ts#L319">connection.ts:319</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4174,7 +4219,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#union">union</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L803">builder.ts:803</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L817">builder.ts:817</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4214,7 +4259,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#unionall">unionAll</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L824">builder.ts:824</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L838">builder.ts:838</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4248,7 +4293,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#unwind">unwind</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L838">builder.ts:838</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L852">builder.ts:852</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4297,7 +4342,7 @@ q.returnObject([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#where">where</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L969">builder.ts:969</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L983">builder.ts:983</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4419,7 +4464,7 @@ query.where([
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="builder.html">Builder</a>.<a href="builder.html#with">with</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/25152fc/src/builder.ts#L1032">builder.ts:1032</a></li>
+								<li>Defined in <a href="https://github.com/Bastianowicz/cypher-query-builder/blob/664f0e8/src/builder.ts#L1046">builder.ts:1046</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
