@@ -1,3 +1,15 @@
+# [6.2.0](https://github.com/bastianowicz/cypher-query-builder/compare/v6.1.1...v6.2.0) (2021-03-14)
+
+
+### Bug Fixes
+
+* **call:** execute call in builder is mandatory ([9b978dc](https://github.com/bastianowicz/cypher-query-builder/commit/9b978dc303f04820298b494c11db3776933facaa))
+
+
+### Features
+
+* **call:** call sub queries on each row with call ([9bce055](https://github.com/bastianowicz/cypher-query-builder/commit/9bce055d6ad89e748a405bbfa50bdb4a28005f8b))
+
 ## [6.1.1](https://github.com/bastianowicz/cypher-query-builder/compare/v6.1.0...v6.1.1) (2021-02-19)
 
 
