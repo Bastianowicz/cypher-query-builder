@@ -20,6 +20,7 @@ import { StringKeyOf, TypedDictionary, ValueOf } from './types';
 import { Query } from './query';
 import { Selector } from './selector';
 import { ReturnObject, Selectable } from './clauses/returnObject';
+import { Call } from './clauses/call';
 
 /**
  * @internal
@@ -225,6 +226,19 @@ export abstract class Builder
    * @returns {Q}
    */
   protected abstract continueChainClause(clause: Clause): Q;
+
+  /**
+   * Executes [call]{@link https://neo4j.com/docs/cypher-manual/current/clauses/call-subquery/}
+   * on every row.
+   * The returned result can be used in the parent query. Make sure that the sub queries
+   * graph model only uses existing data since there is no type check between parent
+   * and sub query
+   *
+   * @param subQuery
+   */
+  call<SubQueryResult>(subQuery: Query<never, SubQueryResult>) : Query<SubQueryResult & G> {
+    return this.continueChainClause(new Call(subQuery)) as never as Query<SubQueryResult & G>;
+  }
 
   /**
    * Adds a [create]{@link https://neo4j.com/docs/developer-manual/current/cypher/clauses/create}
