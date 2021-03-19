@@ -1,3 +1,10 @@
+# [6.3.0](https://github.com/bastianowicz/cypher-query-builder/compare/v6.2.0...v6.3.0) (2021-03-19)
+
+
+### Features
+
+* **returnObject:** Attach alias to give a name to the returnObject ([362ee38](https://github.com/bastianowicz/cypher-query-builder/commit/362ee3802f1a41ca7722d63390ea9c23638374e2))
+
 # [6.2.0](https://github.com/bastianowicz/cypher-query-builder/compare/v6.1.1...v6.2.0) (2021-03-14)
 
 
